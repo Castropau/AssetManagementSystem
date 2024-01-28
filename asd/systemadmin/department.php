@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../ams.png" type="image/svg+xml">
 
-    <title>System Admin</title>
+    <title>Stockman</title>
 
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -56,7 +56,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-solid fa-users"></i>
-                    <span>Users</span></a>
+                    <span>Dashboard</span></a>
             </li>
             
 
@@ -64,7 +64,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="department.php">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Items</span></a>
             </li>
 
         </ul>
@@ -159,7 +159,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Department List</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Item List</h1>
                     </div>
 
                     <!-- Content Row -->
