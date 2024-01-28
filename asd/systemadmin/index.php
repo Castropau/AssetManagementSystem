@@ -177,6 +177,11 @@
                     <div class="dashboard-cards">
 
 
+
+
+
+                    <h1>Hello Paulo!!</h1>
+
 <style>
     .dashboard-cards {
   display: flex;
@@ -336,6 +341,7 @@ const data = {
     fill: true,
   }]
 };
+
 
 const options = {
   scales: {
