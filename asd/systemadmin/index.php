@@ -15,7 +15,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../ams.png" type="image/svg+xml">
 
-    <title>System Admin</title>
+    <title>Stockman</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -57,7 +57,7 @@
             <li class="nav-item active">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-solid fa-users"></i>
-                    <span>Users</span></a>
+                    <span>Dashboard</span></a>       
             </li>
             
 
@@ -65,7 +65,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="department.php">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>Items</span></a>
             </li>
 
         </ul>
@@ -73,6 +73,7 @@
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
+
 
             <!-- Main Content -->
             <div id="content">
@@ -159,10 +160,207 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
+         
+
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Users List</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                     </div>
+
+
+                    <div>
+ 
+
+                    <div>
+
+                    
+                    <div class="dashboard-cards">
+
+
+<style>
+    .dashboard-cards {
+  display: flex;
+  justify-content: center;
+
+}
+
+.card {
+  /* Basic structure */
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 15px; /* Inner spacing */
+  margin-bottom: 15px; /* Spacing between cards */
+
+  /* Header and content */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Vertical arrangement */
+  align-items: center; /* Align content vertically */
+
+  /* Header style */
+  h3 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  /* Content style */
+  span {
+    font-size: 18px;
+    color: #333;
+  }
+}
+</style>
+
+
+  <div id="request-card" class="card">
+    No. Of Request</div>
+  <div id="out-of-stock-card" class="card">
+    No. Of Out of Stock</div>
+</div>
+
+<script>
+
+const requestCountEl = document.getElementById('request-count');
+
+// ... getCurrentWeekRange function remains the same
+
+async function fetchRequestCount(startDate, endDate) {
+  // Simulate a database query with static data
+  const requestCount = 123; // Replace with your static request count
+  return requestCount;
+
+    const query = `SELECT COUNT(*) AS count FROM requests WHERE created_at BETWEEN ? AND ?`;
+    db.query(query, [startDate, endDate], (err, result) => {
+      if (err) {
+        reject(err);
+      } else {
+        resolve(result[0].count); // Assuming the count is in the first row
+      }
+    });
+  };
+
+  return requestCount;
+
+
+// ... updateRequestCount function with error handling
+function updateRequestCount() {
+  const weekRange = getCurrentWeekRange();
+  fetchRequestCount(weekRange.startDate, weekRange.endDate)
+    .then((count) => requestCountEl.textContent = count)
+    .catch((error) => {
+      console.error(error);
+      requestCountEl.textContent = 'Error fetching data';
+    });
+}
+
+const outOfStockCountEl = document.getElementById('out-of-stock-count');
+
+// ... (existing JavaScript functionality)
+
+async function fetchOutOfStockCount() {
+  // Replace this with your actual API call or data source
+  // Make sure it returns the promise resolving to the count of out-of-stock items
+  const response = await fetch('/api/out-of-stock-items');
+  return response.json();
+}
+
+function updateOutOfStockCount() {
+  fetchOutOfStockCount()
+    .then((data) => outOfStockCountEl.textContent = data.count)
+    .catch((error) => console.error(error));
+}
+
+updateOutOfStockCount();
+// ... (optional) call it at intervals like before
+
+
+
+
+</script>
+  <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Request',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
+
+
+<canvas id="myChart1"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+  const ctx1 = document.getElementById('myChart').getContext('2d');
+  const currentMonth = new Date().getMonth(); // 0-indexed (0 = January, 11 = December)
+const months = [];
+for (let i = currentMonth - 5; i <= currentMonth; i++) {
+  months.push(new Date(2024, i, 1).toLocaleString('en-US', { month: 'long' })); // Adjust year as needed
+}
+
+const data = {
+  labels: months,
+  datasets: [{
+    label: '# of Request',
+    data: [65, 59, 80, 81, 56, 55],
+    borderColor: 'blue',
+    backgroundColor: 'rgba(0, 150, 255, 0.2)',
+    fill: true,
+  }, {
+    label: 'Dataset 2',
+    data: [28, 48, 40, 19, 86, 27],
+    borderColor: 'orange',
+    backgroundColor: 'rgba(255, 165, 0, 0.2)',
+    fill: true,
+  }]
+};
+
+const options = {
+  scales: {
+    y: {
+      beginAtZero: true
+    }
+  }
+};
+
+const chart = new Chart(ctx, {
+  type: 'line',
+  data: data,
+  options: options
+});
+</script>
+
+
+
+
+
+
+
+
+
+
 
                     <!-- Content Row -->
                     <div class="row">
