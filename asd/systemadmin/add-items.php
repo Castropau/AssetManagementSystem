@@ -55,36 +55,36 @@
             <!-- Nav Item - Dashboard -->
             <li class="nav-item ">
                 <a class="nav-link" href="index.php">
-                    <i class="fas fa-solid fa-users"></i>
+                    <i class="fas fa-list-alt"></i>
                     <span>Dashboard</span></a>       
             </li>
             
 
             <!-- Nav Item - Items -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="items.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-box"></i>
                     <span>Items</span></a>
             </li>
 
              <!-- Nav Item - Categories -->
              <li class="nav-item">
                 <a class="nav-link" href="categories.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-list-alt"></i>
                     <span>Categories</span></a>
             </li>
 
              <!-- Nav Item - Requests -->
              <li class="nav-item">
                 <a class="nav-link" href="request.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+                    <i class="fas fa-fw fa-envelope"></i>
                     <span>Requests</span></a>
             </li>
              <!-- Nav Item - Allocations -->
-             <li class="nav-item active">
-                <a class="nav-link" href="allocation.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Allocations</span></a>
+             <li class="nav-item">
+                <a class="nav-link" href="storage.php">
+                    <i class="fas fa-fw fa-box-open"></i>
+                    <span>Storages</span></a>
             </li>
              <!-- Nav Item - Reports -->
              <li class="nav-item">
@@ -187,51 +187,71 @@
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Item List</h1>
                     </div>
+                
+<script>
+    function addItemField() {
+  var newField = $('<div class="item">' +
+    '<label for="itemName">Item Name:</label>' +
+    '<input type="text" id="itemName" name="itemName[]"><br>' +
+    '<label for="itemQuantity">Quantity:</label>' +
+    '<input type="number" id="itemQuantity" name="itemQuantity[]"><br>' +
+    '<label for="itemSize">Size:</label>' +
+    '<input type="text" id="itemSize" name="itemSize[]"><br>' +
+    // Add more fields as needed
+    '</div>');
+  $("#itemFields").append(newField);
 
-                    <!-- Content Row -->
-                    <div class="row">
 
-                  
-                   
+</script>
+                    <form id="stockForm">
+  <!-- <div id="itemFields">
+  </div>
+  <label for="addMoreItems">Add More Items?</label><br>
+  <button onclick="addItemField()" id="addMoreItems">Yes</button><br><br> -->
+  <ul>
+  
+  <li>
+  <label for="item-name">Item Name:</label><br>
+  <input type="text">
+  </li>
+  <li>
+    <label for="item-size">Item Size</label>
+  <input name="item-size" type="text" id="myInputBox">
+  </li>
+  <li>
+    <label for="categories">categories</label>
+  <select name="categories" id="categories">
+  <option value="javascript">Computer</option>
+  <option value="python">Machine</option>
+  <option value="c++">C++</option>
+  <option value="java">Java</option>
+</select>
+  </li>
+  <li>
+  <label for="categories">Location</label>
+  <select name="categories" id="categories">
+  <option value="javascript">Computer</option>
+  <option value="python">Machine</option>
+  <option value="c++">C++</option>
+  <option value="java">Java</option>
+</select>
+  </li>
+  <li>
+  <label for="items">Description:</label><br>
+  <input type="text">
+  </li>
+  </ul>
+  <button type="button" onclick="addItemField()">Add Another Item</button>
+  <button type="submit">Submit Form</button>
+</form>
 
 
 
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../logout.php">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+                    
+                    </form>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
+                    <a href="items.php">return</a>
 
 </body>
 

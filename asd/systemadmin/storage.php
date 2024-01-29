@@ -49,12 +49,11 @@
 </a>
 
 
-
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-list-alt"></i>
                     <span>Dashboard</span></a>       
@@ -76,13 +75,13 @@
             </li>
 
              <!-- Nav Item - Requests -->
-             <li class="nav-item active">
+             <li class="nav-item">
                 <a class="nav-link" href="request.php">
                     <i class="fas fa-fw fa-envelope"></i>
                     <span>Requests</span></a>
             </li>
              <!-- Nav Item - Allocations -->
-             <li class="nav-item">
+             <li class="nav-item active">
                 <a class="nav-link" href="storage.php">
                     <i class="fas fa-fw fa-box-open"></i>
                     <span>Storages</span></a>
@@ -93,6 +92,7 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Reports</span></a>
             </li>
+
         </ul>
         <!-- End of Sidebar -->
 
