@@ -17,7 +17,6 @@
 
     <title>Stockman</title>
 
-    <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
@@ -44,7 +43,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
     <img src="../ams.png" alt="Logo" class="img-fluid max-height-30 sidebar-brand-image">
    
 </a>
@@ -54,7 +53,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item ">
                 <a class="nav-link" href="index.php">
                     <i class="fas fa-list-alt"></i>
                     <span>Dashboard</span></a>       
@@ -69,7 +68,7 @@
             </li>
 
              <!-- Nav Item - Categories -->
-             <li class="nav-item">
+             <li class="nav-item active">
                 <a class="nav-link" href="categories.php">
                     <i class="fas fa-fw fa-list-alt"></i>
                     <span>Categories</span></a>
@@ -93,13 +92,11 @@
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Reports</span></a>
             </li>
-
         </ul>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
-
 
             <!-- Main Content -->
             <div id="content">
@@ -118,7 +115,6 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <li class="nav-item dropdown no-arrow d-sm-none">
                             <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -186,19 +182,19 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
 
-         
-
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Item List</h1>
                     </div>
 
+                    <!-- Content Row -->
+                    <div class="row">
+
+                  
+                   
 
 
 
-
-
-                    
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">

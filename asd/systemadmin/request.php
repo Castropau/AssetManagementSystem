@@ -49,24 +49,50 @@
 </a>
 
 
+
             <!-- Divider -->
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
                 <a class="nav-link" href="index.php">
-                    <i class="fas fa-solid fa-users"></i>
-                    <span>Dashboard</span></a>
+                    <i class="fas fa-list-alt"></i>
+                    <span>Dashboard</span></a>       
             </li>
             
 
-            <!-- Nav Item - Charts -->
-            <li class="nav-item active">
-                <a class="nav-link" href="department.php">
-                    <i class="fas fa-fw fa-chart-area"></i>
+            <!-- Nav Item - Items -->
+            <li class="nav-item">
+                <a class="nav-link" href="items.php">
+                    <i class="fas fa-fw fa-box"></i>
                     <span>Items</span></a>
             </li>
 
+             <!-- Nav Item - Categories -->
+             <li class="nav-item">
+                <a class="nav-link" href="categories.php">
+                    <i class="fas fa-fw fa-list-alt"></i>
+                    <span>Categories</span></a>
+            </li>
+
+             <!-- Nav Item - Requests -->
+             <li class="nav-item active">
+                <a class="nav-link" href="request.php">
+                    <i class="fas fa-fw fa-envelope"></i>
+                    <span>Requests</span></a>
+            </li>
+             <!-- Nav Item - Allocations -->
+             <li class="nav-item">
+                <a class="nav-link" href="storage.php">
+                    <i class="fas fa-fw fa-box-open"></i>
+                    <span>Storages</span></a>
+            </li>
+             <!-- Nav Item - Reports -->
+             <li class="nav-item">
+                <a class="nav-link" href="reports.php">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Reports</span></a>
+            </li>
         </ul>
         <!-- End of Sidebar -->
 
